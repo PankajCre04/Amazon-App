@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-String uri = "https://geolocations-app.herokuapp.com/";
+String uri = "https://geolocations-app.herokuapp.com";
 
 class GlobalVariables {
   // COLORS

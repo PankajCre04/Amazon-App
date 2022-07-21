@@ -43,7 +43,7 @@ class AdminServices {
       );
 
       http.Response res = await http.post(
-        Uri.parse('$uri/admin/add-product'),
+        Uri.parse('${uri}admin/add-product'),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
           'x-auth-token': userProvider.user.token
@@ -70,7 +70,7 @@ class AdminServices {
     List<Product> productList = [];
     try {
       http.Response res = await http.get(
-        Uri.parse("$uri/admin/get-products"),
+        Uri.parse("${uri}admin/get-products"),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
           'x-auth-token': userProider.user.token
@@ -106,7 +106,7 @@ class AdminServices {
     final userProvider = Provider.of<UserProvider>(context, listen: false);
     try {
       http.Response res = await http.post(
-        Uri.parse('$uri/admin/delete-product'),
+        Uri.parse('${uri}admin/delete-product'),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
           'x-auth-token': userProvider.user.token,
@@ -133,7 +133,7 @@ class AdminServices {
     List<Order> orderList = [];
     try {
       http.Response res = await http.get(
-        Uri.parse("$uri/admin/get-orders"),
+        Uri.parse("${uri}admin/get-orders"),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
           'x-auth-token': userProider.user.token
@@ -171,7 +171,7 @@ class AdminServices {
     final userProvider = Provider.of<UserProvider>(context, listen: false);
     try {
       http.Response res = await http.post(
-        Uri.parse('$uri/admin/change-order-status'),
+        Uri.parse('${uri}admin/change-order-status'),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
           'x-auth-token': userProvider.user.token,
@@ -199,7 +199,7 @@ class AdminServices {
     int totalEarning = 0;
     try {
       http.Response res =
-          await http.get(Uri.parse('$uri/admin/analytics'), headers: {
+          await http.get(Uri.parse('${uri}admin/analytics'), headers: {
         'Content-Type': 'application/json; charset=UTF-8',
         'x-auth-token': userProvider.user.token,
       });
